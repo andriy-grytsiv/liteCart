@@ -13,7 +13,6 @@ public class LoginTest extends TestBase {
     public static void loginFieldsPresent(String loginFormLink) {
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver().get(loginFormLink);
 
         // check if elements are displayed
@@ -29,13 +28,9 @@ public class LoginTest extends TestBase {
 
     @Test(dataProvider = "loginCredentials", timeOut = 15000)
     public static void validLoginTest(String email, String password, String firstName, String lastName) {
-        // expected results
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver();
-
-        // login
         LoginPage.attemptLogin(email, password);
 
         // get actual results
@@ -52,10 +47,7 @@ public class LoginTest extends TestBase {
         String expectedSuccessLoginMessage = String.format("You are now logged in as %s %s.", firstName, lastName);
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver();
-
-        // login
         LoginPage.attemptLogin(email, password);
 
         // get actual results
@@ -88,10 +80,7 @@ public class LoginTest extends TestBase {
         String email = "test@email.com";
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver();
-
-        // login with empty password
         LoginPage.enterEmail(email);
         LoginPage.clickLoginButton();
 
@@ -111,10 +100,7 @@ public class LoginTest extends TestBase {
         String expectedRestorePasswordEmailSentMessage = "A new password has been sent to your email address.";
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver().get("https://litecart.stqa.ru/en/login");
-
-        // sent restore password email
         LoginPage.enterEmail(email);
         LoginPage.clickLostPasswordButton();
 
@@ -134,10 +120,7 @@ public class LoginTest extends TestBase {
         String expectedEmailAddressDoesNotExistMessage = "The email address does not exist in our database.";
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver().get("https://litecart.stqa.ru/en/login");
-
-        // sent restore password email
         LoginPage.enterEmail(email + "123");
         LoginPage.clickLostPasswordButton();
 
@@ -156,7 +139,6 @@ public class LoginTest extends TestBase {
         // expected results
         SoftAssert softAssert = new SoftAssert();
 
-        // start test
         getDriver().get("https://litecart.stqa.ru/en/login");
         LoginPage.clickSignUpLink();
 
