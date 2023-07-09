@@ -1,47 +1,43 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import utils.Locators;
 
-public class SignUpPage {
-    private WebDriver driver;
-    private By firsNameField = By.xpath("//*[@name='firstname']");
-    private By lastNameField = By.xpath("//*[@name='lastname']");
-    private By address1Field = By.xpath("//*[@name='address1']");
-    private By emailField = By.xpath("//*[@name='email']");
-    private By passwordField = By.xpath("//*[@name='password']");
-    private By createAccountButton = By.xpath("//*[@name='create_account']");
+import static utils.WebDriverContainer.*;
 
+public class SignUpPage extends PageBase{
+    private static By firsNameField = Locators.getLocator("SignUpPage.firsNameField");
+    private static By lastNameField = Locators.getLocator("SignUpPage.lastNameField");
+    private static By address1Field = Locators.getLocator("SignUpPage.address1Field");
+    private static By emailField = Locators.getLocator("SignUpPage.emailField");
+    private static By passwordField = Locators.getLocator("SignUpPage.passwordField");
+    private static By createAccountButton = Locators.getLocator("SignUpPage.createAccountButton");
 
-    public SignUpPage(WebDriver driver) {
-        this.driver = driver;
+    public static boolean isFirsNameFieldDisplayed() {
+        return getDriver().findElement(firsNameField).isDisplayed();
     }
 
-    public boolean isFirsNameFieldDisplayed() {
-        return driver.findElement(firsNameField).isDisplayed();
+    public static boolean isLastNameFieldDisplayed() {
+        return getDriver().findElement(lastNameField).isDisplayed();
     }
 
-    public boolean isLastNameFieldDisplayed() {
-        return driver.findElement(lastNameField).isDisplayed();
+    public static boolean isAddress1FieldDisplayed() {
+        return getDriver().findElement(address1Field).isDisplayed();
     }
 
-    public boolean isAddress1FieldDisplayed() {
-        return driver.findElement(address1Field).isDisplayed();
+    public static boolean isEmailFieldDisplayed() {
+        return getDriver().findElement(emailField).isDisplayed();
     }
 
-    public boolean isEmailFieldDisplayed() {
-        return driver.findElement(emailField).isDisplayed();
+    public static boolean isPasswordFieldDisplayed() {
+        return getDriver().findElement(passwordField).isDisplayed();
     }
 
-    public boolean isPasswordFieldDisplayed() {
-        return driver.findElement(passwordField).isDisplayed();
+    public static boolean isCreateAccountButtonDisplayed() {
+        return getDriver().findElement(createAccountButton).isDisplayed();
     }
 
-    public boolean isCreateAccountButtonDisplayed() {
-        return driver.findElement(createAccountButton).isDisplayed();
-    }
-
-    public void clickCreateAccountButton() {
-        driver.findElement(createAccountButton).click();
+    public static void clickCreateAccountButton() {
+        getDriver().findElement(createAccountButton).click();
     }
 }

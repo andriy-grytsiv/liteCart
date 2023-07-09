@@ -2,108 +2,90 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import utils.Locators;
 
-public class LoginPage {
-    private WebDriver driver;
-    private By accountLoginSection = By.xpath("//*[@name='login_form']");
-    private By emailField = By.xpath("//*[@name='email']");
-    private By passwordField = By.xpath("//*[@name='password']");
-    private By loginButton = By.xpath("//*[@name='login']");
-    private By logoutLink = By.xpath("//*[@id='box-account']//a[text()='Logout']");
-    private By successLoginMessage = By.xpath("//*[@class='notice success']");
-    private By lostPasswordButton = By.xpath("//*[@name='lost_password']");
-    private By signUpLink = By.xpath("//*[@name='login_form']//*[@href='https://litecart.stqa.ru/en/create_account']");
-    private By missingPasswordLoginMessage = By.xpath("//*[@class='notice errors']");
-    private By restorePasswordEmailSentMessage = By.xpath("//*[@class='notice success']");
-    private By emailAddressDoesNotExistMessage = By.xpath("//*[@class='notice errors']");
+import static utils.WebDriverContainer.*;
 
+public class LoginPage extends PageBase{
+    private static By accountLoginSection = Locators.getLocator("LoginPage.accountLoginSection");
+    private static By emailField = Locators.getLocator("LoginPage.emailField");
+    private static By passwordField = Locators.getLocator("LoginPage.passwordField");
+    private static By loginButton = Locators.getLocator("LoginPage.loginButton");
+    private static By logoutLink = Locators.getLocator("LoginPage.logoutLink");
+    private static By successLoginMessage = Locators.getLocator("LoginPage.successLoginMessage");
+    private static By lostPasswordButton = Locators.getLocator("LoginPage.lostPasswordButton");
+    private static By signUpLink = Locators.getLocator("LoginPage.signUpLink");
+    private static By missingPasswordLoginMessage = Locators.getLocator("LoginPage.missingPasswordLoginMessage");
+    private static By restorePasswordEmailSentMessage = Locators.getLocator("LoginPage.restorePasswordEmailSentMessage");
+    private static By emailAddressDoesNotExistMessage = Locators.getLocator("LoginPage.emailAddressDoesNotExistMessage");
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
+    public static boolean isAccountLoginSectionDisplayed() {
+        return getDriver().findElement(accountLoginSection).isDisplayed();
     }
-
-    public boolean isAccountLoginSectionDisplayed() {
-        return driver.findElement(accountLoginSection).isDisplayed();
+    public static boolean isEmailFieldDisplayed() {
+        return getDriver().findElement(emailField).isDisplayed();
     }
-
-    public boolean isEmailFieldDisplayed() {
-        return driver.findElement(emailField).isDisplayed();
+    public static void enterEmail(String email) {
+        getDriver().findElement(emailField).sendKeys(email);
     }
-
-    public void enterEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
+    public static boolean isPasswordFieldDisplayed() {
+        return getDriver().findElement(passwordField).isDisplayed();
     }
-
-    public boolean isPasswordFieldDisplayed() {
-        return driver.findElement(passwordField).isDisplayed();
+    public static void enterPassword(String password) {
+        getDriver().findElement(passwordField).sendKeys(password);
     }
-
-    public void enterPassword(String password) {
-        driver.findElement(passwordField).sendKeys(password);
+    public static boolean isLoginButtonDisplayed() {
+        return getDriver().findElement(passwordField).isDisplayed();
     }
-
-    public boolean isLoginButtonDisplayed() {
-        return driver.findElement(passwordField).isDisplayed();
+    public static void clickLoginButton() {
+        getDriver().findElement(loginButton).click();
     }
-
-    public void clickLoginButton() {
-        driver.findElement(loginButton).click();
+    public static void attemptLogin(String email, String password) {
+        enterEmail(email);
+        enterPassword(password);
+        clickLoginButton();
     }
-
-    public boolean isLogoutLinkDisplayed() {
+    public static boolean isLogoutLinkDisplayed() {
         try {
-            return driver.findElement(logoutLink).isDisplayed();
+            return getDriver().findElement(logoutLink).isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
-
-    public boolean isSuccessLoginMessageDisplayed() {
-        return driver.findElement(successLoginMessage).isDisplayed();
+    public static boolean isSuccessLoginMessageDisplayed() {
+        return getDriver().findElement(successLoginMessage).isDisplayed();
     }
-
-    public String getSuccessLoginMessage() {
-        return driver.findElement(successLoginMessage).getText();
+    public static String getSuccessLoginMessage() {
+        return getDriver().findElement(successLoginMessage).getText();
     }
-
-    public boolean isLostPasswordButtonDisplayed() {
-        return driver.findElement(lostPasswordButton).isDisplayed();
+    public static boolean isLostPasswordButtonDisplayed() {
+        return getDriver().findElement(lostPasswordButton).isDisplayed();
     }
-
-    public void clickLostPasswordButton() {
-        driver.findElement(lostPasswordButton).click();
+    public static void clickLostPasswordButton() {
+        getDriver().findElement(lostPasswordButton).click();
     }
-
-    public boolean isSignUpLinkDisplayed() {
-        return driver.findElement(signUpLink).isDisplayed();
+    public static boolean isSignUpLinkDisplayed() {
+        return getDriver().findElement(signUpLink).isDisplayed();
     }
-
-    public void clickSignUpLink() {
-        driver.findElement(signUpLink).click();
+    public static void clickSignUpLink() {
+        getDriver().findElement(signUpLink).click();
     }
-
-    public boolean isMissingPasswordLoginMessageDisplayed() {
-        return driver.findElement(missingPasswordLoginMessage).isDisplayed();
+    public static boolean isMissingPasswordLoginMessageDisplayed() {
+        return getDriver().findElement(missingPasswordLoginMessage).isDisplayed();
     }
-
-    public String getMissingPasswordLoginMessage() {
-        return driver.findElement(missingPasswordLoginMessage).getText();
+    public static String getMissingPasswordLoginMessage() {
+        return getDriver().findElement(missingPasswordLoginMessage).getText();
     }
-
-    public boolean isRestorePasswordEmailSentMessageDisplayed() {
-        return driver.findElement(restorePasswordEmailSentMessage).isDisplayed();
+    public static boolean isRestorePasswordEmailSentMessageDisplayed() {
+        return getDriver().findElement(restorePasswordEmailSentMessage).isDisplayed();
     }
-
-    public String getRestorePasswordEmailSentMessage() {
-        return driver.findElement(restorePasswordEmailSentMessage).getText();
+    public static String getRestorePasswordEmailSentMessage() {
+        return getDriver().findElement(restorePasswordEmailSentMessage).getText();
     }
-
-    public boolean isEmailAddressDoesNotExistMessageDisplayed() {
-        return driver.findElement(emailAddressDoesNotExistMessage).isDisplayed();
+    public static boolean isEmailAddressDoesNotExistMessageDisplayed() {
+        return getDriver().findElement(emailAddressDoesNotExistMessage).isDisplayed();
     }
-
-    public String getEmailAddressDoesNotExistMessage() {
-        return driver.findElement(emailAddressDoesNotExistMessage).getText();
+    public static String getEmailAddressDoesNotExistMessage() {
+        return getDriver().findElement(emailAddressDoesNotExistMessage).getText();
     }
 }

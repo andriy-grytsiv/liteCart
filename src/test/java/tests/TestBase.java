@@ -1,27 +1,31 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+package tests;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import static utils.WebDriverContainer.*;
+import static utils.WebDriverContainer.getDriver;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-    protected static WebDriver driver;
+
+    private static String baseUrl = "https://litecart.stqa.ru/en/";
 
     @BeforeMethod
     public void setUp() {
         // Code to set up any necessary preconditions before each test method
-        driver = new ChromeDriver();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        getDriver();
+        getDriver().get(baseUrl);
+        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @AfterMethod
     public void tearDown() {
         // Code to set up any necessary preconditions before each test method
-        if (driver != null) {
-            driver.quit();
-        }
+        quitDriver();
     }
 
 
