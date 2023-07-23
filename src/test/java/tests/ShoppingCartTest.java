@@ -4,22 +4,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageObjects.NavigationMenu;
 import pageObjects.ProductPage;
 import pageObjects.ShoppingCartPage;
+import utils.ScreenshotListener;
 
 import java.time.Duration;
 import java.util.List;
 
 import static utils.WebDriverContainer.*;
 
+@Listeners(ScreenshotListener.class)
 public class ShoppingCartTest extends TestBase{
     @Test
     public static void navigateToCart() {
         String expectedCartTitle = "Checkout | My Store";
-        getDriver();
 
         NavigationMenu.clickCart();
 

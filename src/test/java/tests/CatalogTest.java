@@ -1,30 +1,42 @@
 package tests;
 
-import org.openqa.selenium.By;
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageObjects.CatalogPage;
 import pageObjects.NavigationMenu;
+import utils.ScreenshotListener;
 
 import java.util.List;
 
 import static utils.WebDriverContainer.getDriver;
 
+@Listeners({ScreenshotListener.class, ReportPortalTestNGListener.class})
 public class CatalogTest extends TestBase{
-    @Test
-    public static void navigateToCatalogCategory() {
-        String expectedCategoryTitle = "Rubber Ducks | My Store";
+    static final String allureFeatureName = "Catalog";
 
-        getDriver();
+    @Test
+    @Feature(value = allureFeatureName)
+    @Story(value = "LTC-123")
+    public static void navigateToCatalogCategory() {
+        String expectedCategoryTitle = "Rubber Ducks | My Store111";
+
         NavigationMenu.clickCategoryRubberDucks();
 
         // check if page is correct
-        Assert.assertTrue(NavigationMenu.pageTitleMatchesExpected(expectedCategoryTitle));
+        Assert.assertTrue(NavigationMenu.pageTitleMatchesExpected(expectedCategoryTitle), "NOT correct page title\n");
     }
 
     @Test
+    @Feature(value = allureFeatureName)
+    @Issue(value ="STU-30423")
     public static void catalogFieldsPresent() {
         SoftAssert softAssert = new SoftAssert();
         getDriver().get("https://litecart.stqa.ru/en/rubber-ducks-c-1/");
@@ -39,6 +51,8 @@ public class CatalogTest extends TestBase{
     }
 
     @Test
+    @Feature(value = allureFeatureName)
+    @TmsLink(value = "125662995")
     public static void searchProduct() {
         String searchTerm = "blue";
         String searchResultsText = String.format("Search Results for \"%s\"", searchTerm);
@@ -56,6 +70,7 @@ public class CatalogTest extends TestBase{
     }
 
     @Test
+    @Feature(value = allureFeatureName)
     public static void sortingByName() {
         String expectedFirstProductTitle = "Blue Duck";
         String expectedLastProductTitle = "Yellow Duck";

@@ -1,13 +1,17 @@
 package tests;
 
+import org.apache.log4j.Logger;
+import org.testng.annotations.Listeners;
 import pageObjects.LoginPage;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageObjects.SignUpPage;
+import utils.ScreenshotListener;
 
 import static utils.WebDriverContainer.*;
 
+@Listeners(ScreenshotListener.class)
 public class LoginTest extends TestBase {
     @Test (dataProvider = "loginFormLinks")
     public static void loginFieldsPresent(String loginFormLink) {
@@ -30,7 +34,6 @@ public class LoginTest extends TestBase {
     public static void validLoginTest(String email, String password, String firstName, String lastName) {
         SoftAssert softAssert = new SoftAssert();
 
-        getDriver();
         LoginPage.attemptLogin(email, password);
 
         // get actual results
@@ -47,7 +50,6 @@ public class LoginTest extends TestBase {
         String expectedSuccessLoginMessage = String.format("You are now logged in as %s %s.", firstName, lastName);
         SoftAssert softAssert = new SoftAssert();
 
-        getDriver();
         LoginPage.attemptLogin(email, password);
 
         // get actual results
@@ -65,9 +67,6 @@ public class LoginTest extends TestBase {
     public static void loginWithEmptyFields() {
         String emptyLoginFieldsMessage = "Please fill in this field";
 
-        // start test
-        getDriver();
-
         LoginPage.clickLoginButton();
 
         // don't know how to catch error tooltip. it's not in html
@@ -79,14 +78,18 @@ public class LoginTest extends TestBase {
         String expectedMissingPasswordLoginMessage = "You must provide both email address and password.";
         String email = "test@email.com";
         SoftAssert softAssert = new SoftAssert();
+        Logger LOG = Logger.getLogger(LoginTest.class);
 
-        getDriver();
         LoginPage.enterEmail(email);
+        LOG.info("Valid email entered, password field is empty");
         LoginPage.clickLoginButton();
+        LOG.info("Login button clicked");
 
         // get actual results
         boolean actualMissingPasswordLoginMessageDisplayed = LoginPage.isMissingPasswordLoginMessageDisplayed();
+        LOG.info("Checked if missing password message is displayed");
         String actualMissingPasswordLoginMessage = LoginPage.getMissingPasswordLoginMessage();
+        LOG.info("Got missing password message text");
 
         // check asserts
         softAssert.assertTrue(actualMissingPasswordLoginMessageDisplayed, "error message is NOT displayed");

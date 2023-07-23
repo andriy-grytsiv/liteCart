@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import utils.Locators;
@@ -7,6 +8,7 @@ import utils.Locators;
 import static utils.WebDriverContainer.*;
 
 public class LoginPage extends PageBase{
+    static Logger LOG = Logger.getLogger(LoginPage.class);
     private static By accountLoginSection = Locators.getLocator("LoginPage.accountLoginSection");
     private static By emailField = Locators.getLocator("LoginPage.emailField");
     private static By passwordField = Locators.getLocator("LoginPage.passwordField");
@@ -48,9 +50,13 @@ public class LoginPage extends PageBase{
     }
 
     public static void attemptLogin(String email, String password) {
+        LOG.info("Attempting login");
         enterEmail(email);
+        LOG.debug("Email entered - " + email );
+        LOG.debug("Password entered - " + password);
         enterPassword(password);
         clickLoginButton();
+        LOG.debug("Login button clicked");
     }
 
     public static boolean isLogoutLinkDisplayed() {

@@ -8,28 +8,34 @@ import org.openqa.selenium.safari.SafariDriver;
 import static utils.Browser.CHROME;
 
 public class WebDriverContainer {
-    private static WebDriver driver;
+    private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
+        WebDriver driver = driverThreadLocal.get();
         if (driver == null) {
-            initDriver();
+            driver = initDriver();
+            driverThreadLocal.set(driver);
         }
         return driver;
     }
 
-    public static void initDriver() {
+    private static WebDriver initDriver() {
         Browser browserName = Browser.getEnumByLabel(System.getProperty("browser", CHROME.getBrowserName()));
 
-        driver = switch (browserName) {
+        WebDriver driver = switch (browserName) {
             case CHROME -> new ChromeDriver();
             case FIREFOX -> new FirefoxDriver();
             case SAFARI -> new SafariDriver();
         };
         driver.manage().window().maximize();
+        return driver;
     }
 
     public static void quitDriver(){
-        driver.quit();
-        driver = null;
+        WebDriver driver = driverThreadLocal.get();
+        if (driver != null) {
+            driver.quit();
+            driverThreadLocal.remove();
+        }
     }
 }
