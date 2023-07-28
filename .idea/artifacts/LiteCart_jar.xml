@@ -1,10 +1,90 @@
 <component name="ArtifactManager">
-  <artifact name="LiteCart:jar">
+  <artifact type="jar" name="LiteCart:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/LiteCart_jar</output-path>
-    <root id="root">
-      <element id="archive" name="LiteCart.jar">
-        <element id="module-output" name="LiteCart" />
-      </element>
+    <root id="archive" name="LiteCart.jar">
+      <element id="module-output" name="LiteCart" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-safari-driver/4.10.0/selenium-safari-driver-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-json/4.10.0/selenium-json-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/4.10.0/selenium-remote-driver-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testng/testng/7.4.0/testng-7.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/qameta/allure/allure-test-filter/2.23.0/allure-test-filter-2.23.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/aspectj/aspectjlib/1.6.2/aspectjlib-1.6.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-manager/4.10.0/selenium-manager-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/qameta/allure/allure-model/2.23.0/allure-model-2.23.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/qameta/allure/allure-java-commons/2.23.0/allure-java-commons-2.23.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.9.2/aspectjrt-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/4.10.0/selenium-firefox-driver-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-chrome-driver/4.10.0/selenium-chrome-driver-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/4.10.0/selenium-support-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-chromium-driver/4.10.0/selenium-chromium-driver-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.9/jackson-annotations-2.9.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/epam/reportportal/commons-model/5.0.0/commons-model-5.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/epam/reportportal/client-java/5.0.6/client-java-5.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-devtools-v85/4.10.0/selenium-devtools-v85-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/qameta/allure/allure-testng/2.23.0/allure-testng-2.23.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/webjars/jquery/3.5.1/jquery-3.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/epam/reportportal/agent-java-testng/5.0.7/agent-java-testng-5.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.4/tika-core-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/auto/auto-common/1.2/auto-common-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.2.10/rxjava-2.2.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.24/swagger-annotations-1.5.24.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-http/4.10.0/selenium-http-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/4.10.0/selenium-api-4.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.78/jcommander-1.78.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

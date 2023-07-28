@@ -3,7 +3,8 @@ package utils;
 public enum Browser {
     CHROME("chrome"),
     FIREFOX("firefox"),
-    SAFARI("safari");
+    SAFARI("safari"),
+    EDGE("edge");
 
     String browserName;
 
