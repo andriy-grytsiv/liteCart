@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CatalogRegression">
+    <test name="CatalogRegression" parallel="true" thread-count="4">
+        <classes>
+            <class name="tests.CatalogTest"/>
+        </classes>
+    </test>
+
+<!--    <listeners>-->
+<!--        <listener class-name="utils.ReportPortalListener" />-->
+<!--    </listeners>-->
+
+<!--    package utils;-->
+
+<!--    import com.epam.reportportal.testng.ReportPortalTestNGListener;-->
+
+<!--    public class ReportPortalListener extends ReportPortalTestNGListener {-->
+<!--    // You can customize the behavior of the listener here, if needed-->
+<!--    }-->
+</suite>

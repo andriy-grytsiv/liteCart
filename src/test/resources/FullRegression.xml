@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FullRegression">
+    <test name="FullRegression" parallel="true" thread-count="4">
+        <classes>
+            <class name="tests.CatalogTest"/>
+            <class name="tests.LoginTest"/>
+            <class name="tests.ShoppingCartTest"/>
+        </classes>
+    </test>
+</suite>
