@@ -131,7 +131,7 @@
                         <allure.results.directory>${allure.results.directory}</allure.results.directory>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/CatalogRegression.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/FullRegression.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>

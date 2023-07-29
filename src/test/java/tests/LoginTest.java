@@ -11,7 +11,7 @@ import utils.ScreenshotListener;
 
 import static utils.WebDriverContainer.*;
 
-@Listeners(ScreenshotListener.class)
+@Listeners(ScreenshotListener.class) 
 public class LoginTest extends TestBase {
     @Test (dataProvider = "loginFormLinks")
     public static void loginFieldsPresent(String loginFormLink) {
